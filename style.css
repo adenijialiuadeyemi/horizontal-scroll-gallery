@@ -9,6 +9,20 @@ body {
   background: #191919;
 }
 
+.gallery-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10% auto;
+}
+
+.front,
+.back {
+  width: 50px;
+  margin: 40px;
+  cursor: pointer;
+}
+
 .gallery {
   width: 900px;
   display: flex;
@@ -26,6 +40,14 @@ body {
 
 .gallery div img {
   width: 100%;
+  filter: grayscale(100%);
+  transition: transform 0.8s ease;
+}
+
+.gallery div img:hover {
+  filter: grayscale(0%);
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .gallery::-webkit-scrollbar {
